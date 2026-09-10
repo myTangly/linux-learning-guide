@@ -13,3 +13,11 @@
 ## 待授权验证
 
 如需真实运行综合项目，将记录镜像名、容器名、执行结果和清理方式。默认不执行。
+
+## 2026-09-10：GitHub Pages 公开发布
+
+- **授权范围**：创建公开 GitHub 仓库、推送教材、启用 GitHub Actions Pages、设置自定义域名并发起域名所有权验证。
+- **外部位置**：GitHub 仓库 <code>myTangly/linux-learning-guide</code> 与 GitHub Pages 设置。
+- **结果**：仓库已创建并推送；Pages 发布源已设为 GitHub Actions；自定义域名已设为 <code>linux.tangmy.top</code>；<code>tangmy.top</code> 所有权验证等待用户在阿里云添加 TXT 记录。
+- **未操作**：未登录或修改阿里云；未改动其他域名记录；未安装 GitHub CLI；未写入个人邮箱、令牌或密码。
+- **恢复方法**：可在仓库 Pages 设置中移除自定义域名或停用 Pages；DNS 回退由域名所有者删除 <code>linux</code> 的 CNAME。仓库删除属于难以恢复操作，不作为常规回退。
