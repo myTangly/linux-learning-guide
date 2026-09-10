@@ -1,0 +1,9 @@
+.git
+.gitignore
+*.log
+.env
+.env.*
+README.md
+AGENTS.md
+verify.sh
+

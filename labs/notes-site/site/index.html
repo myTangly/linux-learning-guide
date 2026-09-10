@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linux 学习笔记</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">LEARNING LINUX · WSL 2 · DOCKER · CODEX</p>
+      <h1>Linux 学习笔记</h1>
+      <p class="lead">
+        这是我的第一个容器化学习项目。页面由 Nginx 提供，通过 Docker
+        Compose 映射到本机 8080 端口。
+      </p>
+
+      <section class="grid" aria-label="学习成果">
+        <article>
+          <span>01</span>
+          <h2>看懂环境</h2>
+          <p>能区分 Windows、WSL 2、Ubuntu、容器和 Codex 的职责。</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>验证结果</h2>
+          <p>会检查退出码、日志、健康状态和真实 HTTP 响应。</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>安全协作</h2>
+          <p>先限定范围，再让 Codex 修改；最后审阅差异并亲自验收。</p>
+        </article>
+      </section>
+
+      <footer>
+        <code>docker compose up -d</code>
+        <span>→</span>
+        <code>http://localhost:8080</code>
+      </footer>
+    </main>
+  </body>
+</html>
+

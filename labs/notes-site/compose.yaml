@@ -1,0 +1,13 @@
+name: linux-learning-notes
+
+services:
+  web:
+    build:
+      context: .
+    container_name: linux-learning-notes-web
+    ports:
+      - "8080:80"
+    restart: "no"
+    security_opt:
+      - no-new-privileges:true
+
