@@ -16,11 +16,12 @@ function collect(folder) {
 
 collect(root);
 const urls = new Set();
+const siteHosts = new Set(["linux.tangmy.top", "mytangly.github.io"]);
 for (const file of markdownFiles) {
   const markdown = fs.readFileSync(file, "utf8");
-  for (const match of markdown.matchAll(/https:\/\/[^\s)>]+/g)) {
+  for (const match of markdown.matchAll(/https:\/\/[^\s)><]+/g)) {
     const url = match[0].replace(/[.,;，。；]+$/u, "");
-    if (new URL(url).hostname !== "linux.tangmy.top") urls.add(url);
+    if (!siteHosts.has(new URL(url).hostname)) urls.add(url);
   }
 }
 
