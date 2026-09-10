@@ -37,3 +37,11 @@
 - **结果**：确认 DNS 的 <code>linux CNAME mytangly.github.io</code> 正确；默认 GitHub Pages 地址正常。已在仓库 Pages 设置重新保存 <code>linux.tangmy.top</code>，GitHub 显示“DNS Check in Progress”，但公共 DNS 尚未看到账号验证 TXT，因此自定义域名暂时仍返回 GitHub 404。
 - **待用户操作**：在阿里云添加 <code>_github-pages-challenge-myTangly</code> 的 TXT 记录后，再在 GitHub 的已验证域名页面点击 Verify。
 - **恢复方法**：若 DNS 配置需要回退，只需移除 <code>linux</code> 的 CNAME；仓库内容、默认 Pages 地址和其他子域名不受影响。
+
+### 复测结果（同日）
+
+- GitHub Pages 配置确认 <code>cname=linux.tangmy.top</code>，站点地址为 <code>https://linux.tangmy.top/</code>，并已启用强制 HTTPS。
+- 重新触发部署后，工作流第 13 次运行（提交 <code>86af7e5</code>）成功。
+- <code>https://linux.tangmy.top/</code> 与深层章节 <code>/docs/01-five-layers.html</code> 均返回 HTTP 200，TLS 校验结果为 0（证书有效）；<code>http://</code> 访问返回 301 跳转到 HTTPS。
+- 页面标题、20 章导航与 canonical 地址均正确；主站项目卡片链接已指向可用的自定义域名。
+- **仍未完成**：账号级域名所有权 TXT 记录尚未出现在公共 DNS。该记录用于防止域名被其他账号占用，不影响当前访问；建议后续补上并在 GitHub 点击 Verify。
