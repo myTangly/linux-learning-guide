@@ -30,3 +30,10 @@
 - **结果**：新增第三张项目卡片、真实教程页面预览图和 README 入口；提交 <code>b657d67</code> 已推送，GitHub Pages 部署状态为成功。主站 HTTP 页面和预览图已实际读取；根域名 HTTPS 证书名称校验仍未通过，因此未声称 HTTPS 可用。
 - **隐私**：预览图只包含公开教程页面和软件版本基准，不包含账号、凭据、用户目录或设备标识。
 - **恢复方法**：如需撤回，优先在主站仓库新增一次反向提交，移除该卡片、README 条目与 <code>assets/linux-learning-preview.png</code>；不改写已发布历史。
+
+## 2026-09-10：恢复 linux.tangmy.top Pages 绑定
+
+- **授权范围**：排查用户反馈的自定义域名 404，并恢复教程仓库的 Pages 域名设置。
+- **结果**：确认 DNS 的 <code>linux CNAME mytangly.github.io</code> 正确；默认 GitHub Pages 地址正常。已在仓库 Pages 设置重新保存 <code>linux.tangmy.top</code>，GitHub 显示“DNS Check in Progress”，但公共 DNS 尚未看到账号验证 TXT，因此自定义域名暂时仍返回 GitHub 404。
+- **待用户操作**：在阿里云添加 <code>_github-pages-challenge-myTangly</code> 的 TXT 记录后，再在 GitHub 的已验证域名页面点击 Verify。
+- **恢复方法**：若 DNS 配置需要回退，只需移除 <code>linux</code> 的 CNAME；仓库内容、默认 Pages 地址和其他子域名不受影响。
