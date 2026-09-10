@@ -22,3 +22,11 @@
 - **恢复处置**：首次 Pages 初始化长期停留在 <code>updating_pages</code> 并阻塞后续运行。依据 GitHub Pages 官方接口，先取消该残留部署；确认取消状态后删除并重建尚未成功发布的 Pages 站点配置。仓库、提交和 DNS 记录均未删除。重建后的工作流第 8 次运行成功。
 - **未操作**：未登录或修改阿里云；未改动其他域名记录；未安装 GitHub CLI；未写入个人邮箱、令牌或密码。
 - **恢复方法**：可在仓库 Pages 设置中移除自定义域名或停用 Pages；DNS 回退由域名所有者删除 <code>linux</code> 的 CNAME。仓库删除属于难以恢复操作，不作为常规回退。
+
+## 2026-09-10：加入 tangmy.top 主站项目列表
+
+- **授权范围**：在主站“项目与工具”区域加入 Linux 联合教程入口并发布。
+- **外部位置**：GitHub 仓库 <code>myTangly/tangmy.github.io</code> 的 <code>master</code> 分支。
+- **结果**：新增第三张项目卡片、真实教程页面预览图和 README 入口；提交 <code>b657d67</code> 已推送，GitHub Pages 部署状态为成功。主站 HTTP 页面和预览图已实际读取；根域名 HTTPS 证书名称校验仍未通过，因此未声称 HTTPS 可用。
+- **隐私**：预览图只包含公开教程页面和软件版本基准，不包含账号、凭据、用户目录或设备标识。
+- **恢复方法**：如需撤回，优先在主站仓库新增一次反向提交，移除该卡片、README 条目与 <code>assets/linux-learning-preview.png</code>；不改写已发布历史。
